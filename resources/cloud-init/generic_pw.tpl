@@ -17,7 +17,7 @@ packages:
 
 runcmd:
   - mkdir /mnt/storage
-  - echo "//172.16.1.3/storage  /mnt/storage  cifs  guest,uid=1000,iocharset=utf8  0  0" | tee -a /etc/fstab
+  - echo "//172.16.1.6/storage  /mnt/storage  cifs  guest,uid=1000,iocharset=utf8  0  0" | tee -a /etc/fstab
 
 power_state:
  mode: reboot
