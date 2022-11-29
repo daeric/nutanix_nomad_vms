@@ -24,7 +24,7 @@ resource "nutanix_virtual_machine" "instance" {
   num_sockets          = "1"
   memory_size_mib      = 4096
 
-  guest_customization_cloud_init_user_data = base64encode(templatefile("${path.module}/resources/cloud-init/generic.tpl", { hostname = "hashi-${count.index}" }))
+  guest_customization_cloud_init_user_data = base64encode(templatefile("${path.module}/resources/cloud-init/generic_pw.tpl", { hostname = "hashi-${count.index}" }))
 
   disk_list {    
     disk_size_bytes = 104857600000
