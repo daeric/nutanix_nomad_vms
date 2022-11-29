@@ -2,6 +2,7 @@
 variable "cluster_name" {
   type = string
 }
+
 variable "subnet_name" {
   type = string
 }
@@ -16,6 +17,12 @@ variable "user" {
   type = string
 }
 variable "instance_count" {
+  type = string
+}
+variable "foundation_endpoint" {
+  type = string
+}
+variable "foundation_port" {
   type = string
 }
 data "nutanix_cluster" "cluster" {
