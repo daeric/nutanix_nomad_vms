@@ -14,6 +14,8 @@ provider "nutanix" {
   port                = 9440
   insecure            = true
   wait_timeout        = 10
+  foundation_endpoint = var.foundation_endpoint
+  foundation_port     = var.foundation_port
 }
 
 resource "nutanix_virtual_machine" "instance" {
